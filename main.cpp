@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-    Human *p1 = new Human("Hiten");
+    Human *p1 = new Human();
     Human *p2 = new Human("Joe");
 
     Referee r = Referee();
