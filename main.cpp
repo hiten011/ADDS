@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     Human *p1 = new Human("Hiten");
-    Computer *p2 = new Computer();
+    Human *p2 = new Human("Joe");
 
     Referee r = Referee();
     cout << r.refGame(p1, p2)->getName();
