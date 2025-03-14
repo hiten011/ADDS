@@ -1,11 +1,11 @@
-#ifndef ROCK_H
-#define ROCK_H
+#ifndef ROBOT_H
+#define ROBOT_H
 
 #include "Move.h"
 
-class Rock: public Move{
+class Robot: public Move{
     public:
-        Rock();
+        Robot();
         int ref(Move* opp);
         
 };

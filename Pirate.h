@@ -1,11 +1,11 @@
-#ifndef ROCK_H
-#define ROCK_H
+#ifndef PIRATE_H
+#define PIRATE_H
 
 #include "Move.h"
 
-class Rock: public Move{
+class Pirate: public Move{
     public:
-        Rock();
+        Pirate();
         int ref(Move* opp);
         
 };

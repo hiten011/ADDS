@@ -1,16 +1,22 @@
 #include <iostream>
-#include <string>
+
 #include "Player.h"
 #include "Human.h"
 #include "Computer.h"
 #include "Referee.h"
-using namespace std;
+
 
 int main() {
-    Human *p1 = new Human();
-    Human *p2 = new Human("Joe");
+    Player* p1 = new Human("Joe");
+    Player* p2 = new Human("Test");
+    // Player* p2 = new Computer;
 
-    Referee r = Referee();
-    cout << r.refGame(p1, p2)->getName();
+    Referee ref;
+
+    Player* winner = ref.refGame(p1, p2);
+
+    std:: cout << winner->getName() << " is winner";
+
+
     return 0;
-}
+};

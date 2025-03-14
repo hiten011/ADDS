@@ -1,11 +1,11 @@
-#ifndef ROCK_H
-#define ROCK_H
+#ifndef PAPER_H
+#define PAPER_H
 
 #include "Move.h"
 
-class Rock: public Move{
+class Paper: public Move{
     public:
-        Rock();
+        Paper();
         int ref(Move* opp);
         
 };
