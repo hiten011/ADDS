@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include "Move.h"
 
 using namespace std;
 
@@ -12,8 +13,8 @@ class Player {
     
     public:
         Player();
-
-        virtual char makeMove() = 0;
+        Player(string name);
+        virtual Move* makeMove() = 0;
         string getName();   
 };
 

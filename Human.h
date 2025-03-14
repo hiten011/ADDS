@@ -7,7 +7,7 @@ class Human: public Player{
     public:
         Human();
         Human(string name);
-        char makeMove();
+        Move* makeMove();
         
 };
 
