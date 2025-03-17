@@ -1,8 +1,9 @@
 #include <iostream>
 #include "Truckloads.h"
+#include "Reverser.h"
 using namespace std;
 
 int main() {
-    Truckloads* t = new Truckloads();
-    cout << t->numTrucks(1024, 5) << endl;
+    Reverser* r = new Reverser();
+    cout << r->reverseString("1256") << endl;
 }
