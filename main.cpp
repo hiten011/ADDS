@@ -23,7 +23,7 @@ int main() {
 
     // Searching 1
     RecursiveBinarySearch* rbs = new RecursiveBinarySearch;
-    string ans = (rbs->search(arr, 1) == 0) ? "False" : "True";
+    string ans = (rbs->search(arr, 1) == 0) ? "false" : "true";
     cout << ans << " ";
 
     // printing array
