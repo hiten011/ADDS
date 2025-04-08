@@ -2,11 +2,12 @@
 
 vector<int> QuickSort::sort(vector<int> list) { 
     this->list = list;
-    helper(0, this->list.size());
+
+    recursion(0, this->list.size());
     return this->list;
 }
 
-void QuickSort::helper(int start, int end) {
+void QuickSort::recursion(int start, int end) {
    if (start >= end) {
      return;
    }
@@ -21,6 +22,6 @@ void QuickSort::helper(int start, int end) {
        }
    }
 
-   helper(start, ptr);
-   helper(ptr + 1, end);
+   recursion(start, ptr);
+   recursion(ptr + 1, end);
 }

@@ -11,8 +11,12 @@ class QuickSort: public Sort {
         vector<int> sort(vector<int> list); // TC: O(n^2) on Average: O(nlogn)  SC: log(n)
 
     private: 
-        void helper(int start, int end);
         vector<int> list;
+
+        // recursion apprach
+        void recursion(int start, int end);
+
+        // without recursion
 };
 
 #endif
