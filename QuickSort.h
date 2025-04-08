@@ -3,6 +3,7 @@
 #include "Sort.h"
 #include <iostream>
 #include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -17,6 +18,7 @@ class QuickSort: public Sort {
         void recursion(int start, int end);
 
         // without recursion
+        void loop();
 };
 
 #endif
