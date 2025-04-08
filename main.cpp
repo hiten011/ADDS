@@ -1,15 +1,34 @@
 #include "BubbleSort.h"
+#include "QuickSort.h"
+#include "RecursiveBinarySearch.h"
+#include <iostream>
+#include <vector>
+#include <sstream>
 
 int main() {
+    // taking input
+    string line;
+    getline(cin, line);
+    stringstream ss(line);
+    
     vector<int> arr;
-    arr.push_back(1);
-    arr.push_back(10);
-    arr.push_back(100);
-    arr.push_back(3);
+    int num;
+    while (ss >> num) {
+        arr.push_back(num);
+    }
 
-    BubbleSort* bs = new BubbleSort;
+    // Sorting arr
+    QuickSort* bs = new QuickSort;
     arr = bs->sort(arr);
+
+    // Searching 1
+    RecursiveBinarySearch* rbs = new RecursiveBinarySearch;
+    string ans = (rbs->search(arr, 1) == 0) ? "False" : "True";
+    cout << ans << " ";
+
+    // printing array
     for (int i : arr) {
         cout << i << " ";
     }
+    cout << " " << endl;
 }
