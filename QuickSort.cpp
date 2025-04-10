@@ -4,10 +4,10 @@ vector<int> QuickSort::sort(vector<int> list) {
   this->list = list;
 
   // Recursion
-  // recursion(0, this->list.size());
+  recursion(0, this->list.size());
 
   // Loop
-  loop();
+  // loop();
   return this->list;
 }
 
@@ -16,6 +16,7 @@ void QuickSort::recursion(int start, int end) {
     return;
   }
 
+  if((start + 2) < end - 1) swap(list.at(start + 2), list.at(end - 1));
   int ptr = helper(end - 1, start - 1, start, end);
 
   recursion(start, ptr);
@@ -40,6 +41,7 @@ void QuickSort::loop() {
       continue;
     }
 
+    if((start + 2) < end - 1) swap(list.at(start + 2), list.at(end - 1));
     int ptr = helper(end - 1, start - 1, start, end);
 
     // entring in queue
