@@ -48,6 +48,31 @@ void LinkedList::insertLast(Node* tail, int newNum) {
     tail->link = new Node(newNum);
 }
 
+bool LinkedList::deletePosition(int pos) { 
+    if (pos < 1 || this->head == nullptr) {
+        return false;
+    }
+
+    if (pos == 1) {
+        head = head->link;
+        return true;
+    }
+    
+    Node* temp = this->head;
+    for (int i = 2; i < pos; i++) {
+        if (temp->link == nullptr) {
+            return false;
+        }
+
+        temp = temp->link;
+    }
+
+    if (temp->link == nullptr) return false;
+
+    temp->link = temp->link->link;
+    return true;
+}
+
 int LinkedList::get(int pos) {
     if (pos < 1 || this->head == nullptr) {
         return std::numeric_limits<int>::max();
