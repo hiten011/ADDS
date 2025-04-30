@@ -63,6 +63,27 @@ int LinkedList::get(int pos) {
     return temp->data;
 }
 
-LinkedList::~LinkedList() {
-    head->~Node();
-}
+int LinkedList::search(int target) { 
+    Node* temp = this->head;
+    int index = 1;
+    while (temp != nullptr) {
+        if (temp->data == target) {
+            return index;
+        }
+
+        temp = temp->link;
+    }
+
+    return -1;
+ }
+
+ void LinkedList::printList() {
+    Node* temp = this->head;
+    while (temp != nullptr) {
+        std::cout << '[' << temp->data << ']' << ' ';
+    }
+
+    std::cout << std::endl;
+ }
+
+ LinkedList::~LinkedList() { head->~Node(); }

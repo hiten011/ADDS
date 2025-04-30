@@ -15,6 +15,8 @@ class LinkedList {
         void insertLast(Node* tail, int newNum);
 
         int get(int pos);
+        int search(int target);
+        void printList();
 
         ~LinkedList();
 
