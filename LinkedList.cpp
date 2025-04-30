@@ -24,7 +24,7 @@ void LinkedList::insertPosition(int pos, int newNum) {
     
     // else run a loop
     Node* temp = this->head;
-    for (int i = 0; i < pos; i++) {
+    for (int i = 2; i < pos; i++) {
         // if at some point we reach end of LL the insert at last
         if (temp->link == nullptr) {
             insertLast(temp, newNum);
@@ -54,10 +54,12 @@ int LinkedList::get(int pos) {
     } 
 
     Node* temp = this->head;
-    for (int i = 0; i < pos; i++) {
+    for (int i = 2; i <= pos; i++) {
         if (temp->link == nullptr) {
             return std::numeric_limits<int>::max();
         }
+
+        temp = temp->link;
     }
 
     return temp->data;
@@ -71,19 +73,21 @@ int LinkedList::search(int target) {
             return index;
         }
 
+        index++;
         temp = temp->link;
     }
 
     return -1;
- }
+}
 
- void LinkedList::printList() {
+void LinkedList::printList() {
     Node* temp = this->head;
     while (temp != nullptr) {
         std::cout << '[' << temp->data << ']' << ' ';
+        temp = temp->link;
     }
 
     std::cout << std::endl;
- }
+}
 
  LinkedList::~LinkedList() { head->~Node(); }

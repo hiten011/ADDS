@@ -69,11 +69,6 @@ int main(void) {
     if (commandCode=="I") {
         submissionList.insertPosition(param_array[0], param_array[1]);
     }
-    else if (commandCode=="D") {
-        if (!submissionList.deletePosition(param_array[0])) {
-            cout << "ERROR ";
-        }
-    }
     else if (commandCode=="S") {
 		int got = submissionList.search(param_array[0]);
         if (got == -1) {
