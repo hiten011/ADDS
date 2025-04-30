@@ -58,7 +58,7 @@ list<int> BigNumCalc::add(std::list<int> num1, list<int> num2) {
     return head;
 };
 
-list<int> BigNumCalc::sub(std::list<int> num1, list<int> num2) {
+list<int> BigNumCalc::sub(std::list<int> num2, list<int> num1) {
     list<int> head;
     
     auto irr1 = num1.rbegin();
