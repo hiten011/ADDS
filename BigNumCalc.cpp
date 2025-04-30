@@ -66,13 +66,13 @@ list<int> BigNumCalc::sub(std::list<int> num1, list<int> num2) {
     int carry = 0;
 
     while (irr1 != num1.rend() && irr2 != num2.rend()) {
-        carry += (*irr2 - *irr1);
+        int temp = (*irr2 - *irr1) + carry;
         
-        if (carry >= 0) {
-            head.push_front(carry);
+        if (temp >= 0) {
+            head.push_front(temp);
             carry = 0;
         } else {
-            head.push_front(10 + carry);
+            head.push_front(10 + temp);
             carry = -1;
         }
 
@@ -84,6 +84,7 @@ list<int> BigNumCalc::sub(std::list<int> num1, list<int> num2) {
         carry += *irr1;
 
         head.push_front(carry);
+        carry = 0;
 
         irr1++;
     }
@@ -92,6 +93,7 @@ list<int> BigNumCalc::sub(std::list<int> num1, list<int> num2) {
         carry += *irr2;
 
         head.push_front(carry);
+        carry = 0;
 
         irr2++;
     }
