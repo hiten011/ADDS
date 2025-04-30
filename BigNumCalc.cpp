@@ -51,6 +51,10 @@ list<int> BigNumCalc::add(std::list<int> num1, list<int> num2) {
         irr2++;
     }
 
+    if (carry != 0) {
+        head.push_front(carry);
+    }
+
     return head;
 };
 
