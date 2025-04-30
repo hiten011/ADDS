@@ -107,12 +107,12 @@ int LinkedList::search(int target) {
 
 void LinkedList::printList() {
     Node* temp = this->head;
+    std::cout << '[';
     while (temp != nullptr) {
-        std::cout << '[' << temp->data << ']' << ' ';
+        std::cout << temp->data << ' ';
         temp = temp->link;
     }
-
-    std::cout << std::endl;
+    std::cout << ']';
 }
 
  LinkedList::~LinkedList() { head->~Node(); }
