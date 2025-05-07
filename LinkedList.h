@@ -2,6 +2,9 @@
 #define LINKEDLIST_H
 
 #include "Node.h"
+#include <vector>
+
+using namespace std;
 
 class LinkedList {
     private:
@@ -9,10 +12,21 @@ class LinkedList {
     
     public: 
         LinkedList();
+        LinkedList(vector<int> arr); //check
 
-        void removeFront();
-        void removeLast();
-        void removeIndex(int index);
+        void removeFront(); // Check
+        void removeMiddle(); // Check
+        void removeLast(); // Check
+        void removeNthEnd(int index); // check
+        void removeIndex(int index); // check
+        void remove(int num); // check
+
+        void swapValues(int i, int j); //check
+        void swapNode(int i, int j);
+
+        void removeDuplicate(); // sorted LinkedList
+
+        void print(); // check
 
         ~LinkedList();
 };

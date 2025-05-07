@@ -1,8 +1,7 @@
 #ifndef NODE_H
 #define NODE_H
 
-#include <stdio.h>
-#include "LinkedList.h"
+#include <iostream>
 
 class Node {
     friend class LinkedList;
