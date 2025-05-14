@@ -1,9 +1,11 @@
 #include "TriNode.h"
 
-TriNode::TriNode(): isEnd(false), children(26, nullptr) {}
+TriNode::TriNode(): TriNode(26) {}
+
+TriNode::TriNode(int numChildren): isEnd(false), children(numChildren, nullptr), routerNumber(-1) {}
 
 TriNode::~TriNode() {
-    for (int i = 0; i < 26; i++) {
+    for (int i = 0; i < this->children.size(); i++) {
         if (this->children[i] == nullptr) continue;
 
         delete this->children[i];

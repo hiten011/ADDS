@@ -7,8 +7,10 @@ using namespace std;
 class TriNode {
     public:
         TriNode();
+        TriNode(int numChildren); // number of children
 
         bool isEnd;
+        int routerNumber;
         vector<TriNode*> children;
 
         ~TriNode();

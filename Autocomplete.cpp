@@ -1,6 +1,6 @@
 #include "Autocomplete.h"
 
-Autocomplete::Autocomplete(): root(new TriNode()) {}
+Autocomplete::Autocomplete(): root(new TriNode(26)) {}
 
 vector<string> Autocomplete::getSuggestions(string partialWord) {
     vector<string> ans;
@@ -23,7 +23,7 @@ void Autocomplete::getSuggestionsHelper(TriNode* cur, string str, vector<string>
         ans.push_back(str);
     }
 
-    for (int i = 0; i < 26; i++) {
+    for (int i = 0; i < cur->children.size(); i++) {
         TriNode* temp = cur->children[i];
         if (temp == nullptr) continue;
         
