@@ -14,7 +14,7 @@ vector<string> Autocomplete::getSuggestions(string partialWord) {
         cur = cur->children[index];
     }
 
-    getSuggestionsHelper(cur, "", ans);
+    getSuggestionsHelper(cur, partialWord, ans);
     return ans;
 }
 
