@@ -184,7 +184,7 @@ class Heap {
             this->tree.pop_back();
 
             // call heapify
-            this->heapify(this->tree);
+            this->heapifyDown(index);
         }
 
         // helper function find
