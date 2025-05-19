@@ -180,7 +180,7 @@ class Heap {
             // swap first and last index
             std::swap(this->tree[index], this->tree[this->tree.size() - 1]);
 
-            // pop aout the last index
+            // pop out the last index
             this->tree.pop_back();
 
             // call heapify
