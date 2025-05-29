@@ -52,3 +52,4 @@ void DocumentManager::returnDocument(int docid, int patronID) {
 
     patrons[patronID].erase(docid);
 }
+

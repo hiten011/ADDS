@@ -23,8 +23,6 @@ class DocumentManager {
         bool borrowDocument(int docid, int patronID);  // returns true if document is borrowed, false if it can not be borrowed (invalid patronid or the number of copies current borrowed has reached the license limit)
 
         void returnDocument(int docid, int patronID);
-
-        ~DocumentManager();
 };
 
 #endif
